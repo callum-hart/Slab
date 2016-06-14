@@ -22,6 +22,10 @@ section {
       text-transform: uppercase;
       color: rgba(56,70,97,1);
     }
+
+    small {
+      .upperCaseText();
+    }
   }
 
   p {
@@ -74,10 +78,7 @@ section {
       position: absolute;
       top: 8px;
       right: 8px;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(56,70,97,.3);
+      .upperCaseText();
     }
 
     pre {
@@ -91,4 +92,11 @@ section {
       color: rgba(56,70,97,.9);
     }
   }
+}
+
+.upperCaseText() {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(56,70,97,.3);
 }

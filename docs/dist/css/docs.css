@@ -21,6 +21,12 @@ section #title h1 {
   text-transform: uppercase;
   color: #384661;
 }
+section #title small {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(56, 70, 97, 0.3);
+}
 section p {
   margin: 18px 0;
   font-size: 18px;
