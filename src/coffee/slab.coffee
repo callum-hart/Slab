@@ -50,6 +50,7 @@ class Slab
         @handleCompleteMe()
         @handleDefaultKey() if @options.firstComplete.defaultKey
         @setFirstComplete(@options.firstComplete.selectedKey) if @options.firstComplete.selectedKey
+        @setFirstComplete(@options.firstComplete.selectedValue) if @options.firstComplete.selectedValue
         @setSecondComplete(@options.secondComplete.value) if @options.secondComplete.value
         @bindPersistentEvents()
         @handleHooks()
@@ -216,6 +217,8 @@ class Slab
       @focusFirstComplete()
 
   setFirstComplete: (key) ->
+    # TODO: this needs to handle selectedValue when data is a flat array.
+    debugger
     if Utils.present key
       value = Utils.where("key", key, @options.firstComplete.data)[0].value
       @firstComplete.setValue value

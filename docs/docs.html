@@ -54,7 +54,7 @@
       <span class="box-label">JS</span>
 <pre>
 <code>
-// shopCategories is an array of objects. Saved as window variable so it's available in your console.
+// shopCategories saved to window variable so it's available in your console.
 
 window.shopCategories = shopCategories;
 
@@ -76,8 +76,49 @@ amazonExample = new Slab("#amazon-example", {
       </div>
   </div>
 
+  <div class="example">
+    <h2>Example #2</h2>
+    <div class="box">
+      <span class="box-label">Result</span>
+      <div id="gmail-example"></div>
+    </div>
+
+    <div class="box dark">
+      <span class="box-label">HTML</span>
+<pre>
+<code>
+&lt;div id="gmail-example"&gt;&lt;/div&gt;
+</code>
+</pre>
+    </div>
+
+    <div class="box dark">
+      <span class="box-label">JS</span>
+<pre>
+<code>
+// gmailFilters &amp; recentSearches saved to window variables so they're available in your console.
+
+window.gmailFilters = gmailFilters;
+window.recentSearches = recentSearches;
+
+gmailExample = new Slab("#gmail-example", {
+  firstComplete: {
+    data: gmailFilters,
+    suggestResult: true
+  },
+  secondComplete: {
+    data: recentSearches,
+    suggestResult: yes
+  }
+});
+</code>
+</pre>
+      </div>
+  </div>
+
   <script type="text/javascript" src="../vendor/js/complete-me.min.js"></script>
-  <script type="text/javascript" src="../lib/js/slab.min.js"></script>
+  <!-- // <script type="text/javascript" src="../lib/js/slab.min.js"></script> -->
+  <script type="text/javascript" src="../lib/js/slab.js"></script>
   <script type="text/javascript" src="dist/js/docs.js"></script>
 </body>
 </html>

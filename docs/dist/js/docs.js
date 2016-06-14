@@ -1,5 +1,5 @@
 (function() {
-  var amazonExample, shopCategories;
+  var amazonExample, gmailExample, gmailFilters, recentSearches, shopCategories;
 
   shopCategories = [
     {
@@ -135,6 +135,25 @@
     secondComplete: {
       data: [],
       noResultsText: "No recent searches for"
+    }
+  });
+
+  gmailFilters = ["from", "from:me", "to", "in:sent", "label:inbox", "label:sent", "label:unread"];
+
+  recentSearches = ["callum@callumhart.com", "jodiebowers@zentry.com", "wootengreene@mantro.com", "sonjaprince@harmoney.com", "roxiedeleon@electonic.com", "melodybuchanan@manufact.com", "cherrysims@paragonia.com", "marciasimmons@martgo.com", "jamiehayes@magneato.com", "mercerfernandez@techtrix.com", "walterperry@strezzo.com", "lindseyknox@mixers.com", "popefitzgerald@kindaloo.com", "morrisonrusso@austex.com", "lindakaufman@pharmacon.com", "adrianboone@bluplanet.com", "mooncarney@acrodance.com", "molinacannon@junipoor.com", "abbottalexander@marqet.com", "penelopeterrell@zoid.com", "concepcionkeith@zolavo.com", "castanedalevine@multron.com", "claudetterichmond@zaphire.com", "skinnercampos@isoplex.com", "beacharmstrong@exiand.com", "elenamcclure@inquala.com", "moodyhorton@extro.com", "dalebarlow@golistic.com", "karinahensley@voipa.com", "brucecraft@tubesys.com", "christiangilmore@exovent.com", "bennettstein@pharmex.com", "munozcardenas@vendblend.com", "pollyhubbard@bovis.com", "eileenbates@datagen.com", "luannsantiago@trasola.com", "glendacastaneda@fuelton.com", "allieblack@typhonica.com", "marshalllangley@updat.com", "inezcummings@cofine.com", "benderbullock@deminimum.com", "laralittle@acium.com", "serranofreeman@zenco.com", "mcfarlandgiles@incubus.com", "pollardspears@calcu.com", "sosakoch@codact.com", "danielsherman@micronaut.com", "warrendudley@ziggles.com", "minnietran@avenetro.com", "lenorelowery@photobin.com"];
+
+  window.gmailFilters = gmailFilters;
+
+  window.recentSearches = recentSearches;
+
+  gmailExample = new Slab("#gmail-example", {
+    firstComplete: {
+      data: gmailFilters,
+      suggestResult: true
+    },
+    secondComplete: {
+      data: recentSearches,
+      suggestResult: true
     }
   });
 
