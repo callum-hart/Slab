@@ -37,12 +37,12 @@ section p:last-of-type {
   margin-bottom: 0;
 }
 section a {
-  color: #3d7cff;
+  color: #ff7f3d;
   text-decoration: none;
   font-weight: 600;
 }
 section a:hover {
-  color: #0a5aff;
+  color: #ff5d0a;
 }
 .example {
   max-width: 600px;

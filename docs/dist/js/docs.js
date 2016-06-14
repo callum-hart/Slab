@@ -1,53 +1,140 @@
 (function() {
-  var keys, recentSearches, slab1;
+  var amazonExample, shopCategories;
 
-  keys = [
+  shopCategories = [
     {
-      "key": "id",
-      "value": "ID"
+      "key": "aps",
+      "value": "All Departments"
     }, {
-      "key": "email",
-      "value": "Email"
+      "key": "pantry",
+      "value": "Amazon Pantry"
     }, {
-      "key": "name",
-      "value": "Name"
+      "key": "instant-video",
+      "value": "Amazon Video"
     }, {
-      "key": "name_contains",
-      "value": "Name Contains"
+      "key": "mobile-apps",
+      "value": "Apps &amp; Games"
+    }, {
+      "key": "baby",
+      "value": "Baby"
+    }, {
+      "key": "beauty",
+      "value": "Beauty"
+    }, {
+      "key": "stripbooks",
+      "value": "Books"
+    }, {
+      "key": "automotive",
+      "value": "Car &amp; Motorbike"
+    }, {
+      "key": "popular",
+      "value": "CDs &amp; Vinyl"
+    }, {
+      "key": "classical",
+      "value": "Classical"
+    }, {
+      "key": "clothing",
+      "value": "Clothing"
+    }, {
+      "key": "computers",
+      "value": "Computers"
+    }, {
+      "key": "digital-music",
+      "value": "Digital Music "
+    }, {
+      "key": "diy",
+      "value": "DIY &amp; Tools"
+    }, {
+      "key": "dvd",
+      "value": "DVD &amp; Blu-ray"
+    }, {
+      "key": "electronics",
+      "value": "Electronics &amp; Photo"
+    }, {
+      "key": "outdoor",
+      "value": "Garden &amp; Outdoors"
+    }, {
+      "key": "gift-cards",
+      "value": "Gift Cards"
+    }, {
+      "key": "grocery",
+      "value": "Grocery"
+    }, {
+      "key": "drugstore",
+      "value": "Health &amp; Personal Care"
+    }, {
+      "key": "kitchen",
+      "value": "Home &amp; Kitchen"
+    }, {
+      "key": "industrial",
+      "value": "Industrial &amp; Scientific"
+    }, {
+      "key": "jewelry",
+      "value": "Jewellery"
+    }, {
+      "key": "digital-text",
+      "value": "Kindle Store"
+    }, {
+      "key": "appliances",
+      "value": "Large Appliances"
+    }, {
+      "key": "lighting",
+      "value": "Lighting"
+    }, {
+      "key": "dvd-bypost",
+      "value": "LOVEFiLM by Post"
+    }, {
+      "key": "luggage",
+      "value": "Luggage"
+    }, {
+      "key": "luxury-beauty",
+      "value": "Luxury Beauty"
+    }, {
+      "key": "mi",
+      "value": "Musical Instruments &amp; DJ"
+    }, {
+      "key": "videogames",
+      "value": "PC &amp; Video Games"
+    }, {
+      "key": "pets",
+      "value": "Pet Supplies"
+    }, {
+      "key": "shoes",
+      "value": "Shoes &amp; Bags"
+    }, {
+      "key": "software",
+      "value": "Software"
+    }, {
+      "key": "sports",
+      "value": "Sports &amp; Outdoors"
+    }, {
+      "key": "office-products",
+      "value": "Stationery &amp; Office Supplies"
+    }, {
+      "key": "toys",
+      "value": "Toys &amp; Games"
+    }, {
+      "key": "vhs",
+      "value": "VHS"
+    }, {
+      "key": "watches",
+      "value": "Watches"
     }
   ];
 
-  recentSearches = ["john@gmail.com", "henry@gmail.com", "callum@callumhart.com", "joe@gmail.com", "jason@gmail.com"];
+  window.shopCategories = shopCategories;
 
-  slab1 = new Slab("#example-one", {
+  amazonExample = new Slab("#amazon-example", {
+    withButton: true,
+    tabToSearchContent: "Hit <span class=\"cm-key\">tab</span> to shop",
     firstComplete: {
-      selectedKey: "id",
-      data: keys,
-      onSelect: function(value, key) {
-        return console.log("onSelect " + key + ": " + value);
-      },
+      data: shopCategories,
       suggestResult: true,
-      onSuggestionSelected: function(value, key) {
-        return console.log("onSuggestionSelected " + value);
-      }
+      selectedKey: "aps"
     },
     secondComplete: {
-      noResultsText: "No recent searches match",
-      data: recentSearches,
-      onSelect: function(value) {
-        return console.log("onSelect " + value);
-      },
-      canAddNewRecords: true,
-      onAdd: function(newRecord) {
-        return console.log("onAdd " + newRecord);
-      },
-      suggestResult: true,
-      onSuggestionSelected: function(value, key) {
-        return console.log("onSuggestionSelected " + value);
-      }
-    },
-    onSubmit: function(searchKey, searchValue) {
-      return console.log("SEARCH BY: " + searchKey + " : " + searchValue);
+      data: [],
+      noResultsText: "No recent searches for"
     }
   });
 

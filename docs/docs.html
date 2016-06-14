@@ -6,7 +6,7 @@
   <link href="../vendor/css/complete-me.min.css" rel="stylesheet">
   <link href="../lib/css/slab.min.css" rel="stylesheet">
   <link href="dist/css/docs.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,900,700italic,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,900,700italic,700,600italic,600,400italic' rel='stylesheet' type='text/css'> -->
 </head>
 <body>
   <section>
@@ -26,20 +26,26 @@
     <p>
       This is Slab in a nutshell – a <strong>JavaScript component</strong> that handles <strong>search filters and queries</strong>.
     </p>
+    <p>
+      The <strong>library</strong> can be found on <a href="https://github.com/callum-hart/Slab">GitHub</a>
+      as can the <a href="">documentation.</a>
+    </p>
+    <p>And some <strong>examples</strong> can be seen below:</p>
+    <p><i>Big thanks to CommuSoft where I built most of it</i></p>
   </section>
 
   <div class="example">
     <h2>Example #1</h2>
     <div class="box">
       <span class="box-label">Result</span>
-      <div id="example-one"></div>
+      <div id="amazon-example"></div>
     </div>
 
     <div class="box dark">
       <span class="box-label">HTML</span>
 <pre>
 <code>
-&lt;div id="example-one"&gt;&lt;/div&gt;
+&lt;div id="amazon-example"&gt;&lt;/div&gt;
 </code>
 </pre>
     </div>
@@ -48,59 +54,21 @@
       <span class="box-label">JS</span>
 <pre>
 <code>
-keys = [
-  {
-    "key": "id",
-    "value": "ID"
-  }, {
-    "key": "email",
-    "value": "Email"
-  }, {
-    "key": "name",
-    "value": "Name"
-  }, {
-    "key": "name_contains",
-    "value": "Name Contains"
-  }
-];
+// shopCategories is an array of objects. Saved as window variable so it's available in your console.
 
-recentSearches = [
-  "john@gmail.com",
-  "henry@gmail.com",
-  "callum@callumhart.com",
-  "joe@gmail.com",
-  "jason@gmail.com"
-];
+window.shopCategories = shopCategories;
 
-slab1 = new Slab("#slab-1", {
+amazonExample = new Slab("#amazon-example", {
+  withButton: true,
+  tabToSearchContent: "Hit <span class=\"cm-key\">tab</span> to shop",
   firstComplete: {
-    selectedKey: "id",
-    data: keys,
-    onSelect: function(value, key) {
-      return console.log("onSelect " + key + ": " + value);
-    },
+    data: shopCategories,
     suggestResult: true,
-    onSuggestionSelected: function(value, key) {
-      return console.log("onSuggestionSelected " + value);
-    }
+    selectedKey: "aps"
   },
   secondComplete: {
-    noResultsText: "No recent searches match",
-    data: recentSearches,
-    onSelect: function(value) {
-      return console.log("onSelect " + value);
-    },
-    canAddNewRecords: true,
-    onAdd: function(newRecord) {
-      return console.log("onAdd " + newRecord);
-    },
-    suggestResult: true,
-    onSuggestionSelected: function(value, key) {
-      return console.log("onSuggestionSelected " + value);
-    }
-  },
-  onSubmit: function(searchKey, searchValue) {
-    return console.log("SEARCH BY: " + searchKey + " : " + searchValue);
+    data: [],
+    noResultsText: "No recent searches for"
   }
 });
 </code>
