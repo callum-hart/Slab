@@ -153,7 +153,9 @@
     },
     secondComplete: {
       data: recentSearches,
-      suggestResult: true
+      suggestResult: true,
+      canAddNewRecords: true,
+      noResultsText: "No recent searches match"
     }
   });
 

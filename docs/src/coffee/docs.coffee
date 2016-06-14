@@ -250,6 +250,8 @@ gmailExample = new Slab "#gmail-example",
                   secondComplete:
                     data: recentSearches
                     suggestResult: yes
+                    canAddNewRecords: yes
+                    noResultsText: "No recent searches match"
 
 
 
