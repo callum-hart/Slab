@@ -1,0 +1,81 @@
+body {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 60px 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+section {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+section #title {
+  margin: 0 0 30px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 2px solid #384661;
+}
+section #title h1 {
+  margin: 0;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #384661;
+}
+section p {
+  margin: 18px 0;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(56, 70, 97, 0.9);
+}
+section p:last-of-type {
+  margin-bottom: 0;
+}
+section a {
+  color: #3d7cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+section a:hover {
+  color: #0a5aff;
+}
+.example {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.example h2 {
+  float: left;
+  margin: 30px 0 20px 20px;
+  font-size: 21px;
+  color: #384661;
+}
+.example .box {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #f3f4f6;
+}
+.example .box.dark {
+  padding: 0 20px;
+  background: #f3f4f6;
+}
+.example .box .box-label {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(56, 70, 97, 0.3);
+}
+.example .box pre {
+  margin: 0;
+  overflow: auto;
+}
+.example .box code {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  color: rgba(56, 70, 97, 0.9);
+}

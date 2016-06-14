@@ -1,0 +1,116 @@
+@sbFontFamily: Arial, Helvetica, sans-serif;
+@sbFontSize: 14px;
+@sbHeight: 30px;
+@sbWidth: 400px;
+@sbBg: rgba(255,255,255,1);
+@sbBorder: 1px solid rgba(175,178,185,1);
+@sbLabelBg: rgba(247,247,247,1);
+@sbLabelColour: rgb(119,121,125);
+@sbTabColour: rgba(83,85,88,.6);
+@sbBlue: rgba(51,166,231,1);
+@sbButtonBg: @sbLabelBg;
+@sbButtonColour: @sbLabelColour;
+
+// ************************************************************
+// Scaffolding
+// ************************************************************
+
+.sb-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: @sbWidth;
+  height: @sbHeight;
+  .sb-label {
+    height: @sbHeight;
+    line-height: @sbHeight;
+  }
+  .cm-container {
+    position: static;
+    float: none;
+    flex: 2;
+    .cm-input-wrap {
+      .cm-input, .cm-suggestion {
+        width: 100%;
+        height: @sbHeight;
+      }
+    }
+    .cm-results-wrap {
+      margin-top: 0;
+      left: -1px;
+    }
+  }
+  .sb-button {
+    height: @sbHeight;
+    line-height: 34px;
+  }
+}
+
+// ************************************************************
+// Overrides
+// ************************************************************
+
+.sb-container {
+  .sb-button {
+    border: none;
+  }
+}
+
+// ************************************************************
+// UI
+// ************************************************************
+
+.sb-container {
+  font-family: @sbFontFamily;
+  font-size: @sbFontSize;
+  font-weight: normal;
+  background: @sbBg;
+  border: @sbBorder;
+  .sb-label {
+    background: @sbLabelBg;
+    color: @sbLabelColour;
+  }
+  .cm-input-wrap {
+    border: none;
+  }
+  .sb-tab {
+    font-size: @sbFontSize - 1;
+    color: @sbTabColour;
+    &.tab-showing {
+      margin-right: 10px;
+    }
+  }
+  .sb-button {
+    padding: 0 20px;
+    background: @sbButtonBg;
+    border-left: @sbBorder;
+    // icon related styles
+    overflow: hidden; // prevents icon height affecting outline
+    color: @sbButtonColour;
+    font-size: @sbFontSize;
+    &:hover {
+      cursor: pointer;
+      color: @sbBlue;
+    }
+  }
+
+  &.label-showing {
+    .sb-label {
+      padding: 0 10px; // needs to match L and R padding of inputs.
+      border-right: @sbBorder;
+    }
+
+    .sb-complete {
+      &.first-complete-me {
+        display: none;
+      }
+      &.second-complete-me {
+        flex: 1;
+      }
+    }
+  }
+
+  &.focussed {
+    border-color: @sbBlue;
+  }
+}

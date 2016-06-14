@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slab Docs</title>
+  <link href="../vendor/css/complete-me.min.css" rel="stylesheet">
+  <link href="../lib/css/slab.min.css" rel="stylesheet">
+  <link href="dist/css/docs.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,900,700italic,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <section>
+    <div id="title">
+      <h1>Slab</h1>
+    </div>
+    <p>
+      Slab content...
+    </p>
+  </section>
+
+  <div class="example">
+    <h2>Example #1</h2>
+    <div class="box">
+      <span class="box-label">Result</span>
+      <div id="example-one"></div>
+    </div>
+
+    <div class="box dark">
+      <span class="box-label">HTML</span>
+<pre>
+<code>
+&lt;div id="example-one"&gt;&lt;/div&gt;
+</code>
+</pre>
+    </div>
+
+    <div class="box dark">
+      <span class="box-label">JS</span>
+<pre>
+<code>
+keys = [
+  {
+    "key": "id",
+    "value": "ID"
+  }, {
+    "key": "email",
+    "value": "Email"
+  }, {
+    "key": "name",
+    "value": "Name"
+  }, {
+    "key": "name_contains",
+    "value": "Name Contains"
+  }
+];
+
+recentSearches = [
+  "john@gmail.com",
+  "henry@gmail.com",
+  "callum@callumhart.com",
+  "joe@gmail.com",
+  "jason@gmail.com"
+];
+
+slab1 = new Slab("#slab-1", {
+  firstComplete: {
+    selectedKey: "id",
+    data: keys,
+    onSelect: function(value, key) {
+      return console.log("onSelect " + key + ": " + value);
+    },
+    suggestResult: true,
+    onSuggestionSelected: function(value, key) {
+      return console.log("onSuggestionSelected " + value);
+    }
+  },
+  secondComplete: {
+    noResultsText: "No recent searches match",
+    data: recentSearches,
+    onSelect: function(value) {
+      return console.log("onSelect " + value);
+    },
+    canAddNewRecords: true,
+    onAdd: function(newRecord) {
+      return console.log("onAdd " + newRecord);
+    },
+    suggestResult: true,
+    onSuggestionSelected: function(value, key) {
+      return console.log("onSuggestionSelected " + value);
+    }
+  },
+  onSubmit: function(searchKey, searchValue) {
+    return console.log("SEARCH BY: " + searchKey + " : " + searchValue);
+  }
+});
+</code>
+</pre>
+      </div>
+  </div>
+
+  <script type="text/javascript" src="../vendor/js/complete-me.min.js"></script>
+  <script type="text/javascript" src="../lib/js/slab.min.js"></script>
+  <script type="text/javascript" src="dist/js/docs.js"></script>
+</body>
+</html>
