@@ -15,7 +15,7 @@ shopCategories = [
   }
   {
     "key": "mobile-apps",
-    "value": "Apps &amp; Games"
+    "value": "Apps & Games"
   }
   {
     "key": "baby",
@@ -31,11 +31,11 @@ shopCategories = [
   }
   {
     "key": "automotive",
-    "value": "Car &amp; Motorbike"
+    "value": "Car & Motorbike"
   }
   {
     "key": "popular",
-    "value": "CDs &amp; Vinyl"
+    "value": "CDs & Vinyl"
   }
   {
     "key": "classical",
@@ -55,19 +55,19 @@ shopCategories = [
   }
   {
     "key": "diy",
-    "value": "DIY &amp; Tools"
+    "value": "DIY & Tools"
   }
   {
     "key": "dvd",
-    "value": "DVD &amp; Blu-ray"
+    "value": "DVD & Blu-ray"
   }
   {
     "key": "electronics",
-    "value": "Electronics &amp; Photo"
+    "value": "Electronics & Photo"
   }
   {
     "key": "outdoor",
-    "value": "Garden &amp; Outdoors"
+    "value": "Garden & Outdoors"
   }
   {
     "key": "gift-cards",
@@ -79,15 +79,15 @@ shopCategories = [
   }
   {
     "key": "drugstore",
-    "value": "Health &amp; Personal Care"
+    "value": "Health & Personal Care"
   }
   {
     "key": "kitchen",
-    "value": "Home &amp; Kitchen"
+    "value": "Home & Kitchen"
   }
   {
     "key": "industrial",
-    "value": "Industrial &amp; Scientific"
+    "value": "Industrial & Scientific"
   }
   {
     "key": "jewelry",
@@ -119,11 +119,11 @@ shopCategories = [
   }
   {
     "key": "mi",
-    "value": "Musical Instruments &amp; DJ"
+    "value": "Musical Instruments & DJ"
   }
   {
     "key": "videogames",
-    "value": "PC &amp; Video Games"
+    "value": "PC & Video Games"
   }
   {
     "key": "pets",
@@ -131,7 +131,7 @@ shopCategories = [
   }
   {
     "key": "shoes",
-    "value": "Shoes &amp; Bags"
+    "value": "Shoes & Bags"
   }
   {
     "key": "software",
@@ -139,15 +139,15 @@ shopCategories = [
   }
   {
     "key": "sports",
-    "value": "Sports &amp; Outdoors"
+    "value": "Sports & Outdoors"
   }
   {
     "key": "office-products",
-    "value": "Stationery &amp; Office Supplies"
+    "value": "Stationery & Office Supplies"
   }
   {
     "key": "toys",
-    "value": "Toys &amp; Games"
+    "value": "Toys & Games"
   }
   {
     "key": "vhs",
