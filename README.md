@@ -1,6 +1,6 @@
 # Slab
 
-Slab is a **JavaScript component** that handles **search filters and queries**.
+Slab is a **JavaScript component** that handles **search filters** and **queries**.
 
 - [Getting Started](#getting-started)
   - [Demo](#demo)
@@ -34,7 +34,7 @@ So far tested on Chrome, Firefox and Safari.
 
 ### Dependencies
 
-Slab has **1 dependency**. And that is [Complete Me](https://github.com/callum-hart/Complete-Me).
+Slab has **1 dependency** – and that is [Complete Me](https://github.com/callum-hart/Complete-Me).
 
 ### To Run
 
@@ -72,14 +72,14 @@ var instance = new Slab(element, { options });
 ### firstComplete
 
 - **Details**
-  - Child attributes are [configuration options](https://github.com/callum-hart/Complete-Me#configuration) and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
+  - Child attributes are [Configuration options](https://github.com/callum-hart/Complete-Me#configuration) and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
 - **Type** `Object`
 - **Required** Yes
 
 ### secondComplete
 
 - **Details**
-  - Child attributes are [configuration options](https://github.com/callum-hart/Complete-Me#configuration) and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
+  - Child attributes are [Configuration options](https://github.com/callum-hart/Complete-Me#configuration) and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
 - **Type** `Object`
 - **Required** Yes
 
