@@ -30,7 +30,7 @@ A demo of the library in action can be [found here](http://www.callumhart.com/op
 
 ### Supported Browsers
 
-So far tested on Chrome, Firefox and Safari.
+So far tested on Chrome.
 
 ### Dependencies
 
@@ -72,14 +72,14 @@ var instance = new Slab(element, { options });
 ### firstComplete
 
 - **Details**
-  - Child attributes are [Configuration options](https://github.com/callum-hart/Complete-Me#configuration) and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
+  - Child attributes are [Configuration](https://github.com/callum-hart/Complete-Me#configuration) options and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
 - **Type** `Object`
 - **Required** Yes
 
 ### secondComplete
 
 - **Details**
-  - Child attributes are [Configuration options](https://github.com/callum-hart/Complete-Me#configuration) and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
+  - Child attributes are [Configuration](https://github.com/callum-hart/Complete-Me#configuration) options and [Callbacks](https://github.com/callum-hart/Complete-Me#callbacks) from the Complete Me library.
 - **Type** `Object`
 - **Required** Yes
 

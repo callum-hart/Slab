@@ -9,7 +9,7 @@
 @sbTabColour: rgba(83,85,88,.6);
 @sbBlue: rgba(51,166,231,1);
 @sbButtonBg: @sbLabelBg;
-@sbButtonColour: @sbLabelColour;
+@sbMagnifyColour: @sbLabelColour;
 
 // ************************************************************
 // Scaffolding
@@ -42,7 +42,20 @@
   }
   .sb-button {
     height: @sbHeight;
-    line-height: 34px;
+    width: 50px;
+    .sb-magnify-glass, .sb-magnify-handle {
+      position: absolute;
+      left: 20px;
+      height: 8px;
+    }
+    .sb-magnify-glass {
+      top: 6px;
+      width: 8px;
+    }
+    .sb-magnify-handle {
+      top: 15px;
+      width: 2px;
+    }
   }
 }
 
@@ -81,16 +94,26 @@
     }
   }
   .sb-button {
-    padding: 0 20px;
+    position: relative;
     background: @sbButtonBg;
     border-left: @sbBorder;
-    // icon related styles
-    overflow: hidden; // prevents icon height affecting outline
-    color: @sbButtonColour;
-    font-size: @sbFontSize;
+    .sb-magnify-glass {
+      border-radius: 10px;
+      border: 2px solid @sbMagnifyColour;
+    }
+    .sb-magnify-handle {
+      transform: rotate(34deg);
+      background: @sbMagnifyColour;
+    }
     &:hover {
       cursor: pointer;
       color: @sbBlue;
+      .sb-magnify-glass {
+        border-color: @sbBlue;
+      }
+      .sb-magnify-handle {
+        background: @sbBlue;
+      }
     }
   }
 

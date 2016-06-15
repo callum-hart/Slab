@@ -29,7 +29,7 @@ class Slab
     tabToSearchContent: """Hit <span class="cm-key">tab</span> to search"""
     onSubmit: noop # External hook
     withButton: no
-    buttonClass: "ss-search"
+    buttonClass: "sb-button"
     firstComplete:
       placeholder: ""
       noResultsText: "Can't search by"
@@ -241,7 +241,7 @@ class Slab
       @focusFirstComplete()
 
   setFirstComplete: (key) ->
-    # TODO: this needs to handle selectedValue when data is a flat array.
+    # TODO: this needs to handle a new option called selectedValue for when data is a flat array.
     if Utils.present key
       value = Utils.where("key", key, @options.firstComplete.data)[0].value
       @firstComplete.setValue value
@@ -272,7 +272,7 @@ class Slab
 
   handleTemplate: ->
     # Template related variables
-    @containerClass = "sb-container" # might not be needed
+    @containerClass = "sb-container"
     @autoCompleteClass = "sb-complete"
     @selectedLabelClass = "sb-label"
     @tabToSearchClass = "sb-tab"
@@ -284,8 +284,11 @@ class Slab
                 """
 
     if @options.withButton
-      @buttonClass = "sb-button"
-      @buttonSnippet = """<button type="button" class="#{@buttonClass} #{@options.buttonClass}"></button>"""
+      @buttonSnippet = """
+                       <button type="button" class="#{@options.buttonClass}">
+                         <span class="sb-magnify-glass"></span>
+                         <span class="sb-magnify-handle"></span>
+                       </button>"""
       @template += @buttonSnippet
 
     @render @elm, @template
@@ -294,7 +297,7 @@ class Slab
     Utils.addClass @containerClass, @elm
     @selectedLabelElm = @elm.querySelector ".#{@selectedLabelClass}"
     @tabToSearchElm = @elm.querySelector ".#{@tabToSearchClass}"
-    @buttonElm = @elm.querySelector ".#{@buttonClass}"
+    @buttonElm = @elm.querySelector "button"
     @firstCompleteMeElm = @elm.querySelector ".first-complete-me"
     @secondCompleteMeElm = @elm.querySelector ".second-complete-me"
 

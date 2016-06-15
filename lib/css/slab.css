@@ -25,7 +25,21 @@
 }
 .sb-container .sb-button {
   height: 30px;
-  line-height: 34px;
+  width: 50px;
+}
+.sb-container .sb-button .sb-magnify-glass,
+.sb-container .sb-button .sb-magnify-handle {
+  position: absolute;
+  left: 20px;
+  height: 8px;
+}
+.sb-container .sb-button .sb-magnify-glass {
+  top: 6px;
+  width: 8px;
+}
+.sb-container .sb-button .sb-magnify-handle {
+  top: 15px;
+  width: 2px;
 }
 .sb-container .sb-button {
   border: none;
@@ -52,16 +66,27 @@
   margin-right: 10px;
 }
 .sb-container .sb-button {
-  padding: 0 20px;
+  position: relative;
   background: #f7f7f7;
   border-left: 1px solid #afb2b9;
-  overflow: hidden;
-  color: #77797d;
-  font-size: 14px;
+}
+.sb-container .sb-button .sb-magnify-glass {
+  border-radius: 10px;
+  border: 2px solid #77797d;
+}
+.sb-container .sb-button .sb-magnify-handle {
+  transform: rotate(34deg);
+  background: #77797d;
 }
 .sb-container .sb-button:hover {
   cursor: pointer;
   color: #33a6e7;
+}
+.sb-container .sb-button:hover .sb-magnify-glass {
+  border-color: #33a6e7;
+}
+.sb-container .sb-button:hover .sb-magnify-handle {
+  background: #33a6e7;
 }
 .sb-container.label-showing .sb-label {
   padding: 0 10px;
