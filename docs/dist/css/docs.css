@@ -33,9 +33,6 @@ section p {
   line-height: 24px;
   color: rgba(56, 70, 97, 0.9);
 }
-section p:last-of-type {
-  margin-bottom: 0;
-}
 section a {
   color: #ff7f3d;
   text-decoration: none;
@@ -54,7 +51,7 @@ section a:hover {
   font-size: 21px;
   color: #384661;
 }
-.example .box {
+.box {
   position: relative;
   float: left;
   width: 100%;
@@ -63,11 +60,11 @@ section a:hover {
   box-sizing: border-box;
   border: 1px solid #f3f4f6;
 }
-.example .box.dark {
+.box.dark {
   padding: 0 20px;
   background: #f3f4f6;
 }
-.example .box .box-label {
+.box .box-label {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -76,12 +73,18 @@ section a:hover {
   font-weight: 600;
   color: rgba(56, 70, 97, 0.3);
 }
-.example .box pre {
+.box pre {
   margin: 0;
   overflow: auto;
 }
-.example .box code {
+.box code {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 14px;
   color: rgba(56, 70, 97, 0.9);
+}
+.box .github-search-input {
+  margin: 20px 0 20px 69px;
+}
+.box .gmail-search-input {
+  margin-left: 138px;
 }

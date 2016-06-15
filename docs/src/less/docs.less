@@ -33,10 +33,6 @@ section {
     font-size: 18px;
     line-height: 24px;
     color: rgba(56,70,97,.9);
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 
   a {
@@ -59,40 +55,49 @@ section {
     font-size: 21px;
     color: rgba(56,70,97,1);
   }
+}
 
-  .box {
-    position: relative;
-    float: left;
-    width: 100%;
-    margin: 0 0 15px 0;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid rgba(243,244,246,1);
+.box {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(243,244,246,1);
 
-    &.dark {
-      padding: 0 20px;
-      background: rgba(243,244,246,1);
-    }
+  &.dark {
+    padding: 0 20px;
+    background: rgba(243,244,246,1);
+  }
 
-    .box-label {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      .upperCaseText();
-    }
+  .box-label {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    .upperCaseText();
+  }
 
-    pre {
-      margin: 0;
-      overflow: auto;
-    }
+  pre {
+    margin: 0;
+    overflow: auto;
+  }
 
-    code {
-      font-family: "Lucida Console", Monaco, monospace;
-      font-size: 14px;
-      color: rgba(56,70,97,.9);
-    }
+  code {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    color: rgba(56,70,97,.9);
+  }
+
+  .github-search-input {
+    margin: 20px 0 20px 69px;
+  }
+
+  .gmail-search-input {
+    margin-left: 138px;
   }
 }
+
 
 .upperCaseText() {
   text-transform: uppercase;

@@ -59,7 +59,7 @@ class Slab
       onClearSuggestion: noop # External hook
       onSuggestionSelected: noop # External hook
 
-  version: "0.1.0"
+  version: "0.1.1"
 
   constructor: (selector, options) ->
     if CompleteMe?
