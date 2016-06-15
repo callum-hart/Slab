@@ -95,7 +95,7 @@ var instance = new Slab(element, { options });
 - **Details**
   - Change what class is applied to the button.
 - **Type** `String`
-- **Default** `ss-search`
+- **Default** `ss-button`
 - **Condition**
   - Option [`withButton`](withbutton) has to be set to `true`.
 
