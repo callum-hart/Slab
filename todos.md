@@ -2,7 +2,6 @@
 
 - ~~Write content for example page~~
 - ~~Add examples~~
-- Todo line 220 slab.coffee
-- Need icon for when `withButton` option is true
-- Update README.md, using new format from Complete-Me
-- Add License to lib
+- Add screenshots of amazon, github and gmail inputs to example page (1 hr)
+- Update README.md, using new format from Complete-Me (1 hr)
+- ~~Add License to lib~~
