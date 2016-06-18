@@ -30,7 +30,7 @@ A demo of the library in action can be [found here](http://www.callumhart.com/op
 
 ### Supported Browsers
 
-Works in Chrome. *Working on Safari & Firefox support (WIP).*
+Works in **Chrome**. *Currently working on Safari & Firefox support (WIP).*
 
 ### Dependencies
 
