@@ -101,3 +101,12 @@
 .sb-container.focussed {
   border-color: #33a6e7;
 }
+.sb-message {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #77797d;
+}
+.sb-message a {
+  color: #33a6e7;
+}
