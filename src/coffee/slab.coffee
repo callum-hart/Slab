@@ -226,7 +226,7 @@ class Slab
     @firstComplete = new CompleteMe @firstCompleteMeElm, @options.firstComplete
     @secondComplete = new CompleteMe @secondCompleteMeElm, @options.secondComplete
 
-  focusFirstComplete: (e) ->
+  focusFirstComplete: ->
     @firstComplete.input.focus()
     @firefoxFocusShim() if navigator.userAgent.indexOf "Firefox"
 
