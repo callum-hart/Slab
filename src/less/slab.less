@@ -17,6 +17,7 @@
 
 .sb-container {
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   position: relative;
   width: @sbWidth;
@@ -29,6 +30,7 @@
     position: static;
     float: none;
     flex: 2;
+    -webkit-flex: 2;
     .cm-input-wrap {
       .cm-input, .cm-suggestion {
         width: 100%;
@@ -129,6 +131,7 @@
       }
       &.second-complete-me {
         flex: 1;
+        -webkit-flex: 1;
       }
     }
   }

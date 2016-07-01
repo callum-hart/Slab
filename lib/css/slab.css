@@ -1,5 +1,6 @@
 .sb-container {
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   position: relative;
   width: 500px;
@@ -13,6 +14,7 @@
   position: static;
   float: none;
   flex: 2;
+  -webkit-flex: 2;
 }
 .sb-container .cm-container .cm-input-wrap .cm-input,
 .sb-container .cm-container .cm-input-wrap .cm-suggestion {
@@ -97,6 +99,7 @@
 }
 .sb-container.label-showing .sb-complete.second-complete-me {
   flex: 1;
+  -webkit-flex: 1;
 }
 .sb-container.focussed {
   border-color: #33a6e7;
