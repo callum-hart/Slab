@@ -30,7 +30,7 @@ A demo of the library in action can be [found here](http://www.callumhart.com/op
 
 ### Supported Browsers
 
-Works in **Chrome**. *Currently working on [Safari](https://github.com/callum-hart/Slab/issues/1) & [Firefox](https://github.com/callum-hart/Slab/issues/2) support (WIP).*
+So far tested on Chrome, Firefox and Safari.
 
 ### Dependencies
 
