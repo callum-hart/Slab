@@ -2,6 +2,7 @@
   display: flex;
   display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
   position: relative;
   width: 500px;
   height: 30px;
