@@ -66,21 +66,18 @@ class Slab
       @handleElm selector
 
       if @elm
-        if window.chrome
-          @options = Utils.extend {}, @defaultOptions, options
-          @options = Utils.extend {}, @options, @ # Check this is best practise for callbacks, look into only making some methods public.
-          @options.firstComplete = Utils.extend {}, @defaultOptions.firstComplete, @options.firstComplete
-          @options.secondComplete = Utils.extend {}, @defaultOptions.secondComplete, @options.secondComplete
-          @handleTemplate()
-          @handleCompleteMe()
-          @handleDefaultKey() if @options.firstComplete.defaultKey
-          @setFirstComplete(@options.firstComplete.selectedKey) if @options.firstComplete.selectedKey
-          @setFirstComplete(@options.firstComplete.selectedValue) if @options.firstComplete.selectedValue
-          @setSecondComplete(@options.secondComplete.value) if @options.secondComplete.value
-          @bindPersistentEvents()
-          @handleHooks()
-        else
-          @handleUnsupportedBrowsers()
+        @options = Utils.extend {}, @defaultOptions, options
+        @options = Utils.extend {}, @options, @ # Check this is best practise for callbacks, look into only making some methods public.
+        @options.firstComplete = Utils.extend {}, @defaultOptions.firstComplete, @options.firstComplete
+        @options.secondComplete = Utils.extend {}, @defaultOptions.secondComplete, @options.secondComplete
+        @handleTemplate()
+        @handleCompleteMe()
+        @handleDefaultKey() if @options.firstComplete.defaultKey
+        @setFirstComplete(@options.firstComplete.selectedKey) if @options.firstComplete.selectedKey
+        @setFirstComplete(@options.firstComplete.selectedValue) if @options.firstComplete.selectedValue
+        @setSecondComplete(@options.secondComplete.value) if @options.secondComplete.value
+        @bindPersistentEvents()
+        @handleHooks()
       else
         console.warn "Slab couldn't initialize #{selector} as it's not in the DOM"
     else
@@ -229,8 +226,15 @@ class Slab
     @firstComplete = new CompleteMe @firstCompleteMeElm, @options.firstComplete
     @secondComplete = new CompleteMe @secondCompleteMeElm, @options.secondComplete
 
-  focusFirstComplete: ->
+  focusFirstComplete: (e) ->
     @firstComplete.input.focus()
+    @firefoxFocusShim() if navigator.userAgent.indexOf "Firefox"
+
+  # Prevent focus placing cursor at start of input.
+  firefoxFocusShim: ->
+    value = @firstComplete.input.value
+    @firstComplete.input.value = ""
+    @firstComplete.input.value = value
 
   focusSecondComplete: ->
     # requestAnimationFrame needed when onSelect is called from click event.
@@ -303,18 +307,6 @@ class Slab
     @buttonElm = @elm.querySelector "button"
     @firstCompleteMeElm = @elm.querySelector ".first-complete-me"
     @secondCompleteMeElm = @elm.querySelector ".second-complete-me"
-
-  handleUnsupportedBrowsers: ->
-    unsupportedBrowserMessage = """
-                                <p class="sb-message">
-                                  Hey! You caught me a little early. Current browser isn't supported yet.
-                                  <a href="https://github.com/callum-hart/Slab#supported-browsers" target="blank">
-                                    Check here for updates.
-                                  </a>
-                                </p>
-                                """
-
-    @render @elm, unsupportedBrowserMessage
 
   showTabToSearch: ->
     Utils.addClass "tab-showing", @tabToSearchElm
